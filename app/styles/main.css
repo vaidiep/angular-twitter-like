@@ -8,12 +8,21 @@ body {
     margin-top: 60px;
 }
 
+.dropZone {
+    background-color: rgb(241, 241, 241);
+    width: 90%;
+    height: 150px;
+    border: 1px black dotted;
+    padding: 10px;
+}
+
 .isDrag {
     background-color: #A3B7D1;;
 }
 
 .dragEnter {
-    background-color: #EBD744;
+    background-color: rgb(143, 184, 228);
+    color: white;
 }
 
 h4 {

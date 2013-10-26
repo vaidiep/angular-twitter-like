@@ -14,7 +14,7 @@ angular.module('TwitterApp')
       		var curDate = new Date().getTime();
       		var difTime = Math.ceil((curDate - scope.date)/1000);
 
-      		if (difTime > 60) {
+      		if (difTime >= 60) {
       			difTime = Math.ceil(difTime/60);
       			scope.time = difTime + ' minutes ago';
       		} else {

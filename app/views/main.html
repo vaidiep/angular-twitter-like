@@ -1,0 +1,27 @@
+	<div class="row-fluid">
+		<div class="span8">
+			<div>
+				<h2>My Tweets</h2>
+			</div>
+			<div ng-repeat="item in myTweets" drag="{{item.id}}">
+				<blockquote>
+					{{item.message}}
+					<i class="icon-remove" ng-click="removeTweet(item.id)"></i>
+					<time-since date="item.id"></time-since>
+				</blockquote>
+			</div>
+		</div>
+		<div class="span4">
+			<h4>Add a tweet</h4>
+			<p class="notValidTweet" ng-show="newMessage.length>30">Message too long i.e. {{newMessage.length}} chars instead of 20 max</p>
+			<textarea rows="6" ng-model="newMessage"></textarea>
+			<p>
+				<button class="btn btn-primary" type="button" ng-click="addTweet()" ng-disabled="newMessage.length>30">Add it !</button>
+				<button class="btn" type="button" ng-click="newMessage = ''">Cancel</button>
+			</p>
+			<h4>Remove a tweet</h4>
+			<div drop="removeTweet">
+				<i class="icon-trash"></i> Drop Here !
+			</div>
+		</div>
+	</div>

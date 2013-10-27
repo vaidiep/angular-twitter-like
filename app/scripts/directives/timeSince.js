@@ -23,10 +23,10 @@ angular.module('TwitterApp')
       		}
 
       		$timeout(updateTime, 500);
-      	}
+      	};
 
-      	//Init
       	updateTime();
+
       }
     };
   }]);

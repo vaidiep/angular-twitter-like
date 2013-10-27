@@ -66,6 +66,19 @@ i.icon-remove {
     border: 1px solid rgb(219, 219, 219);
 }
 
+#notifications ul li.added{
+    background-color: rgb(176, 255, 173);
+}
+
+#notifications ul li.deleted{
+    background-color: rgb(255, 179, 179);
+}
+
 #notifications ul li .undo {
     float: right;
+}
+
+p.nbrTweets {
+    margin-top: 40px;
+    font-size: 20px;
 }

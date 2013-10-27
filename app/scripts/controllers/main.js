@@ -2,6 +2,7 @@
 
 angular.module('TwitterApp')
   .controller('MainCtrl', ['$scope', 'Tweetpersitence', function ($scope, Tweetpersitence) {
+
     //My list of tweets
     $scope.myTweets = Tweetpersitence.get()
 
@@ -33,4 +34,5 @@ angular.module('TwitterApp')
     	//Save Tweets
     	Tweetpersitence.set($scope.myTweets);
     }
+    
   }]);

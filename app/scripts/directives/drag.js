@@ -5,6 +5,7 @@ angular.module('TwitterApp')
     return {
       restrict: 'A',
       link: function(scope, element, attrs) {
+
       	//Set attribute draggable to true to allow drag behavior on this element
       	attrs.$set('draggable', 'true');
 
@@ -18,6 +19,7 @@ angular.module('TwitterApp')
         element.bind('dragend', function() {
         	element.removeClass('isDrag');
         });
+        
       }
     };
   }]);

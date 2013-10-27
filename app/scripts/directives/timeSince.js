@@ -8,7 +8,8 @@ angular.module('TwitterApp')
       scope: {
       	date: '='
       },
-      link: function postLink(scope, element, attrs) {
+      link: function(scope, element, attrs) {
+
       	//Update time fuction
       	var updateTime = function() {
       		var curDate = new Date().getTime();

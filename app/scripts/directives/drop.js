@@ -5,6 +5,7 @@ angular.module('TwitterApp')
     return {
       restrict: 'A',
       link: function(scope, element, attrs) {
+
       	//Drag enter event
        	element.bind('dragenter', function() {
        		element.addClass('dragEnter');
@@ -26,10 +27,12 @@ angular.module('TwitterApp')
       		//Call the given function
       		var fn = scope.$eval(attrs.drop);
        		fn($rootScope.dragData);
+       		
       		scope.$apply();
 
        		element.removeClass('dragEnter');
        	});
+
       }
     };
   }]);

@@ -5,5 +5,6 @@ angular.module('TwitterApp')
 
   	//List of notifiations
     $scope.notifications = Notifications.list;
+
     
   }]);

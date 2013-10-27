@@ -32,6 +32,8 @@
       </div>
     </div>
 
+    <ng-include src="'views/notifications.html'"></ng-include>
+
     <!-- Add your site or application content here -->
     <div class="container-fluid" ng-view=""></div>
 
@@ -62,6 +64,8 @@
         <script src="scripts/services/tweetPersitence.js"></script>
         <script src="scripts/directives/timeSince.js"></script>
         <script src="scripts/controllers/summary.js"></script>
+        <script src="scripts/controllers/notifications.js"></script>
+        <script src="scripts/services/notifications.js"></script>
         <!-- endbuild -->
 </body>
 </html>

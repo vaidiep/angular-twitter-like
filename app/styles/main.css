@@ -5,7 +5,7 @@ body {
 }
 
 .container-fluid {
-    margin-top: 60px;
+    margin-top: 10px;
 }
 
 .dropZone {
@@ -53,4 +53,19 @@ i.icon-remove {
     color: grey;
     margin-top: 5px;
     font-size: 12px;
+}
+
+#notifications {
+    margin: 41px 40px 0px 40px;
+}
+
+#notifications ul li{
+    padding: 10px;
+    background-color: rgb(253, 246, 240);
+    list-style: none;
+    border: 1px solid rgb(219, 219, 219);
+}
+
+#notifications ul li .undo {
+    float: right;
 }

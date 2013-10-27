@@ -16,9 +16,6 @@ body {
     padding: 10px;
 }
 
-.isDrag {
-    background-color: #A3B7D1;;
-}
 
 .dragEnter {
     background-color: rgb(143, 184, 228);
@@ -33,6 +30,10 @@ blockquote {
     padding: 15px 15px 5px 15px;
     border-left: 5px solid #8EC1CA;
     background-color: #EBF0F3;
+}
+
+.isDrag blockquote{
+    background-color: #94CAEB;
 }
 
 textarea {

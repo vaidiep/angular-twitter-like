@@ -13,11 +13,11 @@ angular.module('TwitterApp')
     	var id = new Date().getTime();
 
     	//Create and add the tweet
-    	var obj = {
+    	var tweet = {
     		'id': id,
     		'message': $scope.newMessage
     	};
-    	$scope.myTweets[id] = obj;
+    	$scope.myTweets[id] = tweet;
 
     	//Empty message
     	$scope.newMessage = '';

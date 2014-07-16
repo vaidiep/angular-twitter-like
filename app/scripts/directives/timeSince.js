@@ -21,7 +21,7 @@ angular.module('TwitterApp')
       		} else {
       			scope.time = difTime + ' seconds ago';
       		}
-
+          
       		$timeout(updateTime, 500);
       	};
 

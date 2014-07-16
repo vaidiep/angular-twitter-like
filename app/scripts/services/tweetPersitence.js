@@ -3,19 +3,19 @@
 angular.module('TwitterApp')
   .service('Tweetpersitence', ['Notifications', function Tweetpersitence(Notifications) {
   	//Init
-  	this.tweets = JSON.parse(localStorage.getItem('tweets'));
-  	if (this.tweets === null) {
-  		this.tweets = {};
+  	var tweets = JSON.parse(localStorage.getItem('tweets'));
+  	if (tweets === null) {
+  		tweets = {};
   	}
 
   	//Get the user tweets from local storage
     this.getTweets = function () {
-    	return this.tweets
+    	return tweets
     };
 
     //Get the user tweets from local storage
     this.getTweet = function (tweetId) {
-    	return this.tweets[tweetId];
+    	return tweets[tweetId];
     };
 
     this.addTweet = function(message) {
@@ -27,7 +27,7 @@ angular.module('TwitterApp')
     		'id': id,
     		'message': message
     	};
-    	this.tweets[id] = tweet;
+    	tweets[id] = tweet;
 
     	//Save Tweets
     	this.save();
@@ -49,7 +49,7 @@ angular.module('TwitterApp')
     	var tweet = this.getTweet(tweetId);
 
     	//Remove the tweet
-    	delete this.tweets[tweetId];
+    	delete tweets[tweetId];
 
     	//Save Tweets
     	this.save();
@@ -68,12 +68,12 @@ angular.module('TwitterApp')
 
     //Set the user tweets to local storage
     this.save =  function () {
-      localStorage.setItem('tweets', JSON.stringify(this.tweets));
+      localStorage.setItem('tweets', JSON.stringify(tweets));
     };
 
     //Get the number of tweets
     this.countTweets = function () {
-    	return Object.keys(this.tweets).length;
+    	return Object.keys(tweets).length;
     }
 
 }]);
